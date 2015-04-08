@@ -9,15 +9,7 @@ public class BresenhamLogik {
 			int x = 0;
 			
 			
-			zeichne(x, y);
-			zeichne(-x,y);
-			zeichne(x,-y);
-			zeichne(-x,-y);
-			zeichne(radius-x, radius-y);
-			zeichne(-radius-x,radius-y);
-			zeichne(radius-x,-radius-y);
-			zeichne(-radius-x,-radius-y);
-
+			zeichne(x,y);
 			while (x!=y){
 				x++;
 				if(x==y){
@@ -31,10 +23,6 @@ public class BresenhamLogik {
 				zeichne(-x,y);
 				zeichne(x,-y);
 				zeichne(-x,-y);
-				zeichne(radius-x, radius-y);
-				zeichne(radius+x,radius-y);
-				zeichne(radius-x,radius+y);
-				zeichne(radius+x,radius+y);
 				System.out.println("x = " + x + "\ny= "+ y);
 			}			
 		}else{

@@ -4,7 +4,8 @@ public class Start {
 	public static void main(String[] args) {
 		
 		BresenhamLogik bl = new BresenhamLogik();
-		bl.doing(12);
+		bl.zeichne(0,0);
+		bl.zeichne(0,1);
 		bl.print();
 		// TODO Auto-generated method stub
 

@@ -14,9 +14,10 @@ public class BresenhamLogik {
 			zeichne(x,-y);
 			zeichne(-x,-y);
 			zeichne(radius-x, radius-y);
-			zeichne(-radius-x,radius-y);
-			zeichne(radius-x,-radius-y);
-			zeichne(-radius-x,-radius-y);
+			zeichne(radius+x,radius-y);
+			zeichne(radius-x,radius+y);
+			zeichne(radius+x,radius+y);
+
 
 			while (x!=y){
 				x++;

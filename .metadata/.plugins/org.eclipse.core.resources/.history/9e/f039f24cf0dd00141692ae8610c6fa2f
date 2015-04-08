@@ -9,34 +9,16 @@ public class BresenhamLogik {
 			int x = 0;
 			
 			
-			zeichne(x, y);
-			zeichne(-x,y);
-			zeichne(x,-y);
-			zeichne(-x,-y);
-			zeichne(radius-x, radius-y);
-			zeichne(-radius-x,radius-y);
-			zeichne(radius-x,-radius-y);
-			zeichne(-radius-x,-radius-y);
-
-			while (x!=y){
+			zeichne(x,y);
+			do{
 				x++;
-				if(x==y){
-					return;
-				}
 				double kreispunkt = Math.sqrt(radius * radius - x * x);
 				if((y-kreispunkt) > 0.5){
 					y--;
 				}
 				zeichne(x, y);
-				zeichne(-x,y);
-				zeichne(x,-y);
-				zeichne(-x,-y);
-				zeichne(radius-x, radius-y);
-				zeichne(radius+x,radius-y);
-				zeichne(radius-x,radius+y);
-				zeichne(radius+x,radius+y);
 				System.out.println("x = " + x + "\ny= "+ y);
-			}			
+			}while(x!=y);			
 		}else{
 			System.out.println("Ungültiger Radius");
 		}
