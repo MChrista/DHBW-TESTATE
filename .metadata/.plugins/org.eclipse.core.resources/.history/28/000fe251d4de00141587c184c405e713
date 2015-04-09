@@ -7,18 +7,18 @@ public class BresenhamLogik {
 		int distance = 3-(2*radius);
 		int x = 0;
 		int y = radius;
-		zeichne(x, y);
-		zeichne(-x,y);
-		zeichne(x,-y);
-		zeichne(-x,-y);
-		zeichne(y,x);
-		zeichne(y,-x);
-		zeichne(-y,x);
-		zeichne(-y,-x);
 		
 		while(x<y){
+			zeichne(x, y);
+			zeichne(-x,y);
+			zeichne(x,-y);
+			zeichne(-x,-y);
+			zeichne(y,x);
+			zeichne(y,-x);
+			zeichne(-y,x);
+			zeichne(-y,-x);
 			if(distance<0){
-				distance = distance + 4*x +6;
+				distance = distance + 4*x+6;
 				if(distance>0){
 					y--;
 				}
@@ -29,15 +29,6 @@ public class BresenhamLogik {
 				}
 			}
 			x++;
-			zeichne(x, y);
-			zeichne(-x,y);
-			zeichne(x,-y);
-			zeichne(-x,-y);
-			zeichne(y,x);
-			zeichne(y,-x);
-			zeichne(-y,x);
-			zeichne(-y,-x);
-			
 		}
 		
 		

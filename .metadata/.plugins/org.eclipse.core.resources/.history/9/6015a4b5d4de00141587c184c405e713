@@ -15,8 +15,9 @@ public class BresenhamLogik {
 		zeichne(y,-x);
 		zeichne(-y,x);
 		zeichne(-y,-x);
-		
 		while(x<y){
+			
+			System.out.println("Distanz" + distance);
 			if(distance<0){
 				distance = distance + 4*x +6;
 				if(distance>0){
@@ -37,6 +38,7 @@ public class BresenhamLogik {
 			zeichne(y,-x);
 			zeichne(-y,x);
 			zeichne(-y,-x);
+			System.out.println("Distanz" + distance);
 			
 		}
 		

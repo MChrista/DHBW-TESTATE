@@ -15,10 +15,10 @@ public class BresenhamLogik {
 		zeichne(y,-x);
 		zeichne(-y,x);
 		zeichne(-y,-x);
-		
 		while(x<y){
+			x++;
 			if(distance<0){
-				distance = distance + 4*x +6;
+				distance = distance + 4*x+6;
 				if(distance>0){
 					y--;
 				}
@@ -28,7 +28,6 @@ public class BresenhamLogik {
 					y--;
 				}
 			}
-			x++;
 			zeichne(x, y);
 			zeichne(-x,y);
 			zeichne(x,-y);
