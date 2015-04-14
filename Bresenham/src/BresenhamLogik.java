@@ -1,21 +1,16 @@
+import java.util.Stack;
 
 public class BresenhamLogik {
 	public final int SIZE = 25;
 	int [][] feld = new int[SIZE][SIZE];
+	Stack<Integer> xCoordinates = new Stack<Integer>();
+	Stack<Integer> yCoordinates = new Stack<Integer>();
 	
-	public void doing(int radius){
+	public void doing(int radius) {
 		int distance = 3-(2*radius);
 		int x = 0;
 		int y = radius;
-		zeichne(x, y);
-		zeichne(-x,y);
-		zeichne(x,-y);
-		zeichne(-x,-y);
-		zeichne(y,x);
-		zeichne(y,-x);
-		zeichne(-y,x);
-		zeichne(-y,-x);
-		
+		addShit(x, y);
 		while(x<y){
 			if(distance<0){
 				distance = distance + 4*x +6;
@@ -29,54 +24,23 @@ public class BresenhamLogik {
 				}
 			}
 			x++;
-			zeichne(x, y);
-			zeichne(-x,y);
-			zeichne(x,-y);
-			zeichne(-x,-y);
-			zeichne(y,x);
-			zeichne(y,-x);
-			zeichne(-y,x);
-			zeichne(-y,-x);
-			
+			addShit(x, y);
 		}
-		
-		
-		/*
-	
-
-		while (x!=y){
-			x++;
-			if(x==y){
-				return;
-			}
-			double kreispunkt = Math.sqrt(radius * radius - x * x);
-			if((y-kreispunkt) > 0.5){
-				y--;
-			}
-			zeichne(x, y);
-			zeichne(-x,y);
-			zeichne(x,-y);
-			zeichne(-x,-y);
-			zeichne(y,x);
-			zeichne(y,-x);
-			zeichne(-y,x);
-			zeichne(-y,-x);
-			System.out.println("x = " + x + "\ny= "+ y);
-		}			
-		*/
-		
+		fill(12, 12);
 	}
 	
-	public void zeichne(int x, int y){
-		y = 12 - y;
-		feld[y][x+12] = 1;
-		return;
+	private void addShit(int x, int y) {
+		put(addXOffset(x), addYOffset(y));
+		put(addXOffset(-x), addYOffset(y));
+		put(addXOffset(x), addYOffset(-y));
+		put(addXOffset(-x), addYOffset(-y));
+		put(addXOffset(y), addYOffset(x));
+		put(addXOffset(-y), addYOffset(x));
+		put(addXOffset(y), addYOffset(-x));
+		put(addXOffset(-y), addYOffset(-x));
 	}
-	
-	
 	
 	public void print(){
-		String buffer = "";
 		for(int i = 0;i<SIZE;i++){
 			for(int j=0;j<SIZE;j++){
 				System.out.print(feld[i][j] + " ");
@@ -84,5 +48,70 @@ public class BresenhamLogik {
 			System.out.print("\n");
 		}
 	}
+	
+	private void put(int x, int y) {
+		feld[y][x]=1;
+	}
+	
+	private int addXOffset(int x) {
+		return x+12;
+	}
+	
+	private int addYOffset(int y) {
+		return 12-y;
+	}
+	
+	public void fill(int x, int y) {
+		xCoordinates.push(x);
+		yCoordinates.push(y);
+		while(!xCoordinates.empty()) {
+			x = xCoordinates.pop();
+			y = yCoordinates.pop();
+			if(feld[x][y] == 0) {
 
+				System.out.println(x + " " + y + " " + feld[x][y]);
+				
+				put(addXOffset(x), addYOffset(y));
+				
+				if(feld[x][y+1] == 0) {
+					xCoordinates.push(x);
+					yCoordinates.push(y+1);
+				}
+				
+
+				if(feld[x][y-1] == 0) {
+					xCoordinates.push(x);
+					yCoordinates.push(y-1);
+				}
+
+				if(feld[x+1][y] == 0) {
+					xCoordinates.push(x+1);
+					yCoordinates.push(y);
+				}
+
+				if(feld[x-1][y] == 0) {
+					xCoordinates.push(x-1);
+					yCoordinates.push(y);
+				}
+			}
+		}
+		return;
+	}
+
+	private boolean isBorder(int x, int y) {
+		if(!isBlank(x, y)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	private boolean isBlank(int x, int y) {
+		if(feld[x][y] == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }

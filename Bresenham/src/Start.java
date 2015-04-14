@@ -1,4 +1,3 @@
-
 public class Start {
 
 	public static void main(String[] args) {
@@ -6,8 +5,7 @@ public class Start {
 		BresenhamLogik bl = new BresenhamLogik();
 		bl.doing(12);
 		bl.print();
-		// TODO Auto-generated method stub
-
+		
 	}
 
 }
