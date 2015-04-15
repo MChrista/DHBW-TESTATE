@@ -1,0 +1,17 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class View extends JFrame{
+	
+	public View(){
+		this.setSize(400, 400);
+		this.setVisible(true);
+	}
+	
+	public void fill(){
+		Container content = new JButton("Test");
+		this.setContentPane(content);
+	}
+	
+}

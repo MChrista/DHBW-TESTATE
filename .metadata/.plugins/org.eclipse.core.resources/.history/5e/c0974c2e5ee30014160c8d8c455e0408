@@ -1,0 +1,24 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+public class View extends JFrame{
+	JButton fillButton = new JButton("fill");
+	JButton pointerButton = new JButton("pointer");
+	Container menueArea = new JPanel(new BorderLayout());
+	Container paintingArea = new JPanel();
+	public View(){
+		menueArea.add(fillButton,BorderLayout.NORTH);
+		menueArea.add(pointerButton,BorderLayout.SOUTH);
+		this.add(menueArea,BorderLayout.WEST);
+		this.add(paintingArea,BorderLayout.CENTER);
+		this.setSize(400, 400);
+		this.setVisible(true);
+	}
+	
+	public void fill(){
+		Container content = new JButton("Test");
+		this.setContentPane(content);
+	}
+	
+}

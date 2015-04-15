@@ -1,18 +1,13 @@
-import java.awt.*;
-
-import javax.swing.*;
 
 public class Start {
 
 	public static void main(String[] args) {
-		/*
-		BresenhamLogik bl = new BresenhamLogik();
-		bl.doing(12);
-		bl.print();
-		*/
 		
-		//Testing View
-		View view = new View();
+		BresenhamLogik bl = new BresenhamLogik();
+		bl.doing(24);
+		bl.print();
+		// TODO Auto-generated method stub
+
 	}
 
 }

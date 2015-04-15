@@ -1,14 +1,9 @@
-import java.util.Stack;
-
 
 public class Backup {
 
 
 
-	public final int SIZE = 25;
-	int [][] feld = new int[SIZE][SIZE];
-	Stack<Integer> xCoordinates = new Stack<Integer>();
-	Stack<Integer> yCoordinates = new Stack<Integer>();
+
 	public void doing(int radius){
 		int distance = 3-(2*radius);
 		int x = 0;

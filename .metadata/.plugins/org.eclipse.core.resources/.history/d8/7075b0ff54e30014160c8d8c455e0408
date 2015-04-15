@@ -12,7 +12,11 @@ public class Start {
 		*/
 		
 		//Testing View
-		View view = new View();
+		Container content = new View();
+		JFrame frame = new JFrame("API");
+		frame.setSize(400,400);
+		frame.setContentPane(content);
+		frame.setVisible(true);
 	}
 
 }

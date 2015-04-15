@@ -13,6 +13,7 @@ public class Start {
 		
 		//Testing View
 		View view = new View();
+		view.fill();
 	}
 
 }

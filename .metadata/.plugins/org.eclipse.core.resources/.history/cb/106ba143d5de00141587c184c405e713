@@ -1,14 +1,8 @@
-import java.util.Stack;
 
-
-public class Backup {
-
-
-
+public class BresenhamLogik {
 	public final int SIZE = 25;
 	int [][] feld = new int[SIZE][SIZE];
-	Stack<Integer> xCoordinates = new Stack<Integer>();
-	Stack<Integer> yCoordinates = new Stack<Integer>();
+	
 	public void doing(int radius){
 		int distance = 3-(2*radius);
 		int x = 0;
@@ -49,7 +43,7 @@ public class Backup {
 		
 		/*
 	
-	
+
 		while (x!=y){
 			x++;
 			if(x==y){
@@ -70,20 +64,19 @@ public class Backup {
 			System.out.println("x = " + x + "\ny= "+ y);
 		}			
 		*/
-		//fill(12, 12);
+		
 	}
+	
 	public void zeichne(int x, int y){
 		y = 12 - y;
 		feld[y][x+12] = 1;
 		return;
 	}
 	
-	public void setWithoutOffset(int x, int y) {
-		feld[y][x] = 1;
-	}
 	
 	
 	public void print(){
+		String buffer = "";
 		for(int i = 0;i<SIZE;i++){
 			for(int j=0;j<SIZE;j++){
 				System.out.print(feld[i][j] + " ");
@@ -91,57 +84,5 @@ public class Backup {
 			System.out.print("\n");
 		}
 	}
-	
-	public void fill(int x, int y) {
-		xCoordinates.push(x);
-		yCoordinates.push(y);
-		while(!xCoordinates.empty()) {
-			x = xCoordinates.pop();
-			y = yCoordinates.pop();
-			if(feld[x][y] == 0) {
-	
-				//System.out.println(x + " " + y + " " + feld[x][y]);
-				
-				setWithoutOffset(x, y);
-				
-				if(!isBorder(x, y+1)) {
-					xCoordinates.push(x);
-					yCoordinates.push(y+1);
-				}
-				
-	
-				if(!isBorder(x, y-1)) {
-					xCoordinates.push(x);
-					yCoordinates.push(y-1);
-				}
-	
-				if(!isBorder(x+1, y)) {
-					xCoordinates.push(x+1);
-					yCoordinates.push(y);
-				}
-	
-				if(!isBorder(x-1, y)) {
-					xCoordinates.push(x-1);
-					yCoordinates.push(y);
-				}
-			}
-		}
-		return;
-	}
-	
-	private boolean isBorder(int x, int y) {
-		if(!isBlank(x, y) && x != 0 && y != 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	private boolean isBlank(int x, int y) {
-		if(feld[x][y] == 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+
 }
