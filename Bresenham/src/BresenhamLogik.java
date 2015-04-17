@@ -114,4 +114,9 @@ public class BresenhamLogik {
 		}
 	}
 	
+	public int[][] getBresenhamMatrix(int radius){
+		this.doing(radius);
+		return feld;
+	}
+	
 }

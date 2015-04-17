@@ -2,17 +2,16 @@ import java.awt.*;
 
 import javax.swing.*;
 
+import Model.BresenhamCircle;
+
 public class Start {
 
 	public static void main(String[] args) {
-		/*
-		BresenhamLogik bl = new BresenhamLogik();
-		bl.doing(12);
+		
+		BresenhamCircle bl = new BresenhamCircle();
 		bl.print();
-		*/
 		
 		//Testing View
-		View view = new View();
 	}
 
 }
