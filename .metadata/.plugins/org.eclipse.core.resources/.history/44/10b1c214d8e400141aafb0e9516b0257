@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class MainWindow extends JFrame{
 	public MainWindow() {
-		JPanel content = new Circle(100,100,50);
+		JPanel content = new Circle(100,100);
 		this.setSize(400, 400);
 		this.setContentPane(content);
 		this.setVisible(true);
