@@ -11,7 +11,9 @@
 <fullyQualifiedTypeName name="java.awt.Container"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="View.Circle"/>
-<fullyQualifiedTypeName name="Model.BresenhamCircle"/>
 <fullyQualifiedTypeName name="View.MainWindow"/>
 <fullyQualifiedTypeName name="Model.FillPolygon"/>
+<fullyQualifiedTypeName name="View.DrawGraphic"/>
+<fullyQualifiedTypeName name="Model.BresenhamCircle"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>

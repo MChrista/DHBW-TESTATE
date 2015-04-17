@@ -1,0 +1,39 @@
+package View;
+
+import java.awt.Container;
+
+
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import Model.BresenhamCircle;
+
+public class MainWindow extends JFrame{
+	public MainWindow() {
+		BresenhamCircle bc = new BresenhamCircle();
+		int[][] data = new int[400][400];
+		int [][] circleData = bc.create(50, 100, 100);
+		for(int i=0;i<circleData.length;i++){
+			for(int j=0;j<circleData.length;j++){
+				data[i][j]=circleData[i][j];	
+			}
+		}
+		JPanel content = new DrawGraphic(data);
+		this.setSize(400, 400);
+		this.setContentPane(content);
+		this.setVisible(true);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void fill(){
+		//First Step: Generate a two dimensional array of actual panel
+		Container jp = this.getContentPane();
+		int width = jp.getWidth();
+		int heigth = jp.getHeight();
+		for(int i = 0; i < heigth ; i++){
+			for(int j =0;j<width; i ++){
+			}
+		}
+	}
+}

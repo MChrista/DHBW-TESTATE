@@ -35,9 +35,6 @@ public class BresenhamCircle {
 	
 	public void setPoint(int[][] matrix,int x, int y){
 		int offset = (size / 2);
-		System.out.println("Offset is: "+offset);
-		System.out.println("Y is: "+y);
-		System.out.println("X is: "+x+"\n");
 		matrix[offset - y][x + offset] = 1;
 		matrix[offset - y][-x + offset] = 1;
 		matrix[offset+y][x+ offset] = 1;
