@@ -23,9 +23,7 @@ public class Circle extends JPanel{
 	    for(int i=0;i < circleData.length;i++){
 	    	for(int j=0; j< circleData.length;j++){
 	    		if(circleData[i][j] == 1){
-	    			System.out.println("x is "+ i);
-	    			System.out.println("y is "+ j);
-	    			g2d.drawLine(i, j, i, j);
+	    			g2d.drawLine(i, i, j, j);
 	    		}	
 	    	}
 	    }
