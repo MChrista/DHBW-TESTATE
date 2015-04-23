@@ -6,6 +6,7 @@ public class BresenhamLine {
 	
 	public void drawLine( int x1, int y1, int x2, int y2 )
 	  {
+		Matrix.setPoint(x1, y1);
 	    int xIncrement = 1,
 	        yIncrement = 1,
 	        dy = 2*(y2-y1),
@@ -36,8 +37,8 @@ public class BresenhamLine {
 	          e += dx;
 	          y += yIncrement;
 	        }
-	        System.out.println(x + " " + y);
-	        if(x<Matrix.getWidth() && y<Matrix.getHeight()) {
+	        //System.out.println(x + " " + y);
+	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>0 && y>0) {
 	        	Matrix.setPoint(x, y);
 	        }
 	        x += xIncrement;
@@ -60,8 +61,8 @@ public class BresenhamLine {
 	          x += xIncrement;
 	        }
 
-	        System.out.println(x + " " + y);
-	        if(x<Matrix.getWidth() && y<Matrix.getHeight()) {
+	        //System.out.println(x + " " + y);
+	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>0 && y>0) {
 	        	Matrix.setPoint(x, y);
 	        }
 	        y += yIncrement;

@@ -29,14 +29,14 @@ public class BresenhamCircle {
 	}
 	
 	private void setPoint(int x, int y) {
-		Matrix.setPoint(x, y);
-		Matrix.setPoint(-x, y);
-		Matrix.setPoint(x, -y);
-		Matrix.setPoint(-x, -y);
-		Matrix.setPoint(y, x);
-		Matrix.setPoint(-y, x);
-		Matrix.setPoint(y, -x);
-		Matrix.setPoint(-y, -x);
+		Matrix.setPoint(x+Matrix.getWidth(), y+Matrix.getHeight());
+		Matrix.setPoint(-x+Matrix.getWidth(), y+Matrix.getHeight());
+		Matrix.setPoint(x+Matrix.getWidth(), -y+Matrix.getHeight());
+		Matrix.setPoint(-x+Matrix.getWidth(), -y+Matrix.getHeight());
+		Matrix.setPoint(y+Matrix.getHeight(), x+Matrix.getWidth());
+		Matrix.setPoint(-y+Matrix.getHeight(), x+Matrix.getWidth());
+		Matrix.setPoint(y+Matrix.getHeight(), -x+Matrix.getWidth());
+		Matrix.setPoint(-y+Matrix.getHeight(), -x+Matrix.getWidth());
 	}
 	
 }

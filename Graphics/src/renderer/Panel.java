@@ -1,10 +1,13 @@
 package renderer;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
 
 import javax.swing.JPanel;
+
+import objects.Matrix;
 
 @SuppressWarnings("serial")
 public class Panel extends JPanel {
@@ -12,6 +15,8 @@ public class Panel extends JPanel {
 	
 	public Panel(int[][] matrix) {
 		this.matrix = matrix;
+		this.setPreferredSize(new Dimension(Matrix.getWidth(), Matrix.getHeight()));
+		//this.setSize(Matrix.getWidth(), Matrix.getHeight());
 	}
 	
 	 @Override
