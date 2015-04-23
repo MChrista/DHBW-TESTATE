@@ -2,6 +2,7 @@ package renderer;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Color;
 
 import javax.swing.JPanel;
 
@@ -25,6 +26,7 @@ public class Panel extends JPanel {
 		for(int i=0; i<matrix.length; i++) {
 			for(int j=0; j<matrix.length; j++) {
 				if(matrix[i][j] == 1) {
+					g2d.setColor(Color.CYAN);
 					g2d.drawLine(i, j, i, j);
 				}
 			}
