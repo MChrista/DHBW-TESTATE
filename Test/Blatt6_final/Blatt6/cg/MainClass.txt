@@ -1,0 +1,1 @@
+Main-Class: cg.draw2D.App
