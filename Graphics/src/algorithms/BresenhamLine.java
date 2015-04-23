@@ -4,9 +4,11 @@ import objects.Matrix;
 
 public class BresenhamLine {
 	
+	// set point between 0 and 399
 	public void drawLine( int x1, int y1, int x2, int y2 )
 	  {
-		Matrix.setPoint(x1, y1);
+		//Matrix.setPoint(x1, y1);
+		//Matrix.setPoint(x2, y2);
 	    int xIncrement = 1,
 	        yIncrement = 1,
 	        dy = 2*(y2-y1),
@@ -20,7 +22,7 @@ public class BresenhamLine {
 	  
 	    if ( y1 > y2 ) {      // Spiegeln an X-Achse
 	      yIncrement= -1;
-	      dy= -dy;
+	      dy = -dy;
 	    }
 	  
 	    int e = 2*dy + dx;
@@ -37,8 +39,9 @@ public class BresenhamLine {
 	          e += dx;
 	          y += yIncrement;
 	        }
-	        //System.out.println(x + " " + y);
-	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>0 && y>0) {
+	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>=0 && y>=0) {
+
+		        System.out.println(x + " " + y);
 	        	Matrix.setPoint(x, y);
 	        }
 	        x += xIncrement;
@@ -61,8 +64,8 @@ public class BresenhamLine {
 	          x += xIncrement;
 	        }
 
-	        //System.out.println(x + " " + y);
-	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>0 && y>0) {
+	        if(x<Matrix.getWidth() && y<Matrix.getHeight() && x>=0 && y>=0) {
+		        System.out.println(x + " " + y);
 	        	Matrix.setPoint(x, y);
 	        }
 	        y += yIncrement;

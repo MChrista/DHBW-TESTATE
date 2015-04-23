@@ -19,6 +19,7 @@ public class Main {
 		//BresenhamCircle bc = new BresenhamCircle();
 		//bc.drawCircle(50);
 		FillPolygon fp = new FillPolygon();
+		fp.fill(210, 20);
 		fp.fill(210, 210);
 		new Frame(new Panel(Matrix.getMatrix()));
 	}
