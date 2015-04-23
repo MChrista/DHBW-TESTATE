@@ -28,7 +28,7 @@ public class Matrix {
 	}	
 	
 	public static void setPoint(int x, int y) {
-		Matrix.matrix[y+Matrix.getHeight()/2][x+Matrix.getWidth()/2] = 1;
+		Matrix.matrix[y][x] = 1;
 	}
 	
 	public static int getPoint(int x, int y) {
