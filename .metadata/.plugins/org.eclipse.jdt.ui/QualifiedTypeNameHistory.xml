@@ -19,4 +19,5 @@
 <fullyQualifiedTypeName name="algorithms.FillPolygon"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="objects.Matrix"/>
+<fullyQualifiedTypeName name="Jama.Matrix"/>
 </qualifiedTypeNameHistroy>

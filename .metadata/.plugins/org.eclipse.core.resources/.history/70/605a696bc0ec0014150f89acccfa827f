@@ -9,6 +9,7 @@ public class BresenhamLine {
 		// Matrix.setPoint(x1, y1);
 		// Matrix.setPoint(x2, y2);
 		int xIncrement = 1, yIncrement = 1, dy = 2 * (y2 - y1), dx = 2 * (x1 - x2), tmp;
+
 		if (x1 > x2) { // Spiegeln an Y-Achse
 			xIncrement = -1;
 			dx = -dx;
@@ -62,8 +63,6 @@ public class BresenhamLine {
 			}
 		}
 	}
-	
-	
 
 	/*
 	 * public void drawLine(int startX, int startY, int endX, int endY) { int x

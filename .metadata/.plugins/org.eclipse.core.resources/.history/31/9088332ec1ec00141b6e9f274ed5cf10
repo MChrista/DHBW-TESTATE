@@ -1,0 +1,31 @@
+package algorithms;
+import objects.Matrix;
+
+public class MatrixOperations {
+	
+	private int[][]data;
+	private int[][] operationArray = {{1,0,0},{0,1,0},{0,0,1}};
+	
+	public MatrixOperations(int xOffset, int yOffset){
+		
+	}
+	
+	public void slide(){
+		
+	}
+	
+	public void rotate(){
+		
+	}
+	
+	private void saveGraphicsMatrixToTemp(){
+		
+	}
+	
+	private void resetToIdentityMatrix(){
+		
+	}
+	
+	
+
+}

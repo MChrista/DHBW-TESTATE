@@ -1,0 +1,44 @@
+package algorithms;
+import objects.Matrix;
+
+public class MatrixOperations {
+	
+	private int[][]data;
+	private int[][] operationArray = new int[3][3];
+	
+	public MatrixOperations(){
+		this.resetToIdentityMatrix();
+		this.data = new int[Matrix.getHeight()][Matrix.getWidth()];
+	}
+	
+	public void slide(int x, int y){
+		
+	}
+	
+	public void rotate(){
+		
+	}
+	
+	public void setNewDrawingMatrix(int xOffset, int yOffset){
+		for(int i = 0; i < Matrix.getWidth(); i++){
+			for(int j = 0; j < Matrix.getHeight(); j++){
+				
+			}
+		}
+	}
+	
+	private void resetToIdentityMatrix(){
+		operationArray[0][0] = 1;
+		operationArray[0][1] = 0;
+		operationArray[0][2] = 0;
+		operationArray[1][0] = 0;
+		operationArray[1][1] = 1;
+		operationArray[1][2] = 0;
+		operationArray[2][0] = 0;
+		operationArray[2][1] = 0;
+		operationArray[2][2] = 1;
+	}
+	
+	
+
+}
