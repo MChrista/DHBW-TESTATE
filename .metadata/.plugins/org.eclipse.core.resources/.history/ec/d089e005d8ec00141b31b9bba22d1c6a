@@ -23,6 +23,17 @@ public class MatrixOperations {
 	
 	public void scale(int xPercent, int yPercent){
 		double [][] scaleArray = {{(double)(xPercent/100),0,0},{0,(double)(yPercent/100),0},{0,0,1}};
+		
+	}
+	
+	private void multiplyOperations(double [][] matrix){
+		double temp[][]= new double[3][3];
+		for(int i =0 ; i<3;i++){
+			for(int j=0;j<3;j++){
+				
+			}
+		}
+		
 	}
 	
 	// Offsets between 1 and Matrix Width or Matrix Height

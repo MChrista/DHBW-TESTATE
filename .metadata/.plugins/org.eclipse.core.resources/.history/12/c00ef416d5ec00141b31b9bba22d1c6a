@@ -4,7 +4,7 @@ import objects.Matrix;
 public class MatrixOperations {
 	
 	private Matrix matrix;
-	private double[][] operationArray = new double[3][3];
+	private int[][] operationArray = new int[3][3];
 	
 	
 	public MatrixOperations(Matrix matrix){
@@ -13,20 +13,16 @@ public class MatrixOperations {
 	}
 	
 	public void slide(int x, int y){
-		double [][] slideArray = {{1,0,0},{0,1,0},{x,y,1}};
-	}
-	
-	public void rotate(double angle, int point){
-		double [][] rotationArray = {{Math.cos(angle),-Math.sin(angle),0},{Math.sin(angle),Math.cos(angle),0},{0,0,1}};
 		
 	}
 	
-	public void scale(int xPercent, int yPercent){
-		double [][] scaleArray = {{(double)(xPercent/100),0,0},{0,(double)(yPercent/100),0},{0,0,1}};
+	public void rotate(int angle){
+		
 	}
 	
 	// Offsets between 1 and Matrix Width or Matrix Height
 	public void setNewDrawingMatrix(int xOffset, int yOffset){
+		
 		//TODO: If Offsets are in range
 		
 		for(int i = 0; i < matrix.getWidth(); i++){
