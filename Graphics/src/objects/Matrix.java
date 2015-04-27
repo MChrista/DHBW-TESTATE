@@ -1,43 +1,43 @@
 package objects;
 
 public class Matrix {
-	private static int[][] matrix;
-	private static int width;
-	private static int height;
+	private int[][] matrix;
+	private int width;
+	private int height;
 
 	public Matrix(int width, int height) {
-		Matrix.width = width;
-		Matrix.height = height;
-		Matrix.matrix = new int[width][height];
+		this.width = width;
+		this.height = height;
+		this.matrix = new int[width][height];
 	}
 
-	public static int getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-	public static int getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public static int[][] getMatrix() {
+	public int[][] getMatrix() {
 		return matrix;
 	}
 
-	public static void setMatrix(int[][] matrix) {
-		Matrix.matrix = matrix;
+	public void setMatrix(int[][] matrix) {
+		this.matrix = matrix;
 	}
 
-	public static void setPoint(int x, int y) {
+	public void setPoint(int x, int y) {
 		if (x < getWidth() && y < getHeight() && y >= 0 && x >= 0) {
-			Matrix.matrix[y][x] = 1;
+			this.matrix[y][x] = 1;
 		}
 	}
 
-	public static int getPoint(int x, int y) {
-		return Matrix.matrix[y][x];
+	public int getPoint(int x, int y) {
+		return this.matrix[y][x];
 	}
 
-	public static void clearMatrix() {
+	public void clearMatrix() {
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				matrix[i][j] = 0;

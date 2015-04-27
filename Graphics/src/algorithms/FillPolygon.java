@@ -5,8 +5,15 @@ import java.util.Stack;
 import objects.Matrix;
 
 public class FillPolygon {
+	
+	private Matrix matrix;
+	public FillPolygon(Matrix matrix) {
+		// TODO Auto-generated constructor stub
+		this.matrix = matrix;
+	}
+
 	public void fill(int x, int y){
-		int data[][] = Matrix.getMatrix();
+		int data[][] = matrix.getMatrix();
 		Stack<Integer> intstk = new Stack<Integer>();
 		if(data[y][x]==1){
 			System.out.println("Startpoint is on border");

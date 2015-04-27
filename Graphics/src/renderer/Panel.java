@@ -11,11 +11,11 @@ import objects.Matrix;
 
 @SuppressWarnings("serial")
 public class Panel extends JPanel {
-	private int[][] matrix;
+	private Matrix matrix;
 	
-	public Panel(int[][] matrix) {
+	public Panel(Matrix matrix) {
 		this.matrix = matrix;
-		this.setPreferredSize(new Dimension(Matrix.getWidth(), Matrix.getHeight()));
+		this.setPreferredSize(new Dimension(matrix.getWidth(), matrix.getHeight()));
 		//this.setSize(Matrix.getWidth(), Matrix.getHeight());
 	}
 	
@@ -28,9 +28,9 @@ public class Panel extends JPanel {
 	private void render(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		//g2d.drawline(x, y, x, y);
-		for(int i=0; i<matrix.length; i++) {
-			for(int j=0; j<matrix.length; j++) {
-				if(matrix[i][j] == 1) {
+		for(int i=0; i<matrix.getWidth(); i++) {
+			for(int j=0; j<matrix.getHeight(); j++) {
+				if(matrix.getPoint(j, i) == 1) {
 					g2d.setColor(Color.BLACK);
 					g2d.drawLine(i, j, i, j);
 				}

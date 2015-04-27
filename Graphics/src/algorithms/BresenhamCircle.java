@@ -3,6 +3,13 @@ package algorithms;
 import objects.Matrix;
 
 public class BresenhamCircle {
+	
+	private Matrix matrix;
+
+	public BresenhamCircle(Matrix matrix) {
+		// TODO Auto-generated constructor stub
+		this.matrix = matrix;
+	}
 
 	public void drawCircle(int radius) {
 		int distance = 3 - (2 * radius);
@@ -29,29 +36,29 @@ public class BresenhamCircle {
 	}
 
 	private void setPoint(int x, int y) {
-		int xOffset = (Matrix.getWidth() / 2);
-		int yOffset = (Matrix.getHeight() / 2);
+		int xOffset = (matrix.getWidth() / 2);
+		int yOffset = (matrix.getHeight() / 2);
 		System.out.println("X Value is: " + (x + xOffset));
 		System.out.println("Y Value is: " + (y + yOffset));
-		if ((x + xOffset) <= Matrix.getWidth() - 1 && (yOffset + y) <= Matrix.getHeight() - 1 && (x + xOffset) >= 0
+		if ((x + xOffset) <= matrix.getWidth() - 1 && (yOffset + y) <= matrix.getHeight() - 1 && (x + xOffset) >= 0
 				&& (yOffset + y) >= 0) {
-			Matrix.setPoint(x + xOffset, yOffset + y);
-			Matrix.setPoint(yOffset + y, x + xOffset);
+			matrix.setPoint(x + xOffset, yOffset + y);
+			matrix.setPoint(yOffset + y, x + xOffset);
 		}
-		if (-x + xOffset <= Matrix.getWidth() - 1 && yOffset + y <= Matrix.getHeight() - 1 && -x + xOffset >= 0
+		if (-x + xOffset <= matrix.getWidth() - 1 && yOffset + y <= matrix.getHeight() - 1 && -x + xOffset >= 0
 				&& yOffset + y >= 0) {
-			Matrix.setPoint(-x + xOffset, yOffset + y);
-			Matrix.setPoint(yOffset + y, -x + xOffset);
+			matrix.setPoint(-x + xOffset, yOffset + y);
+			matrix.setPoint(yOffset + y, -x + xOffset);
 		}
-		if (x + xOffset <= Matrix.getWidth() - 1 && yOffset - y <= Matrix.getHeight() - 1 && x + xOffset >= 0
+		if (x + xOffset <= matrix.getWidth() - 1 && yOffset - y <= matrix.getHeight() - 1 && x + xOffset >= 0
 				&& yOffset - y >= 0) {
-			Matrix.setPoint(x + xOffset, yOffset - y);
-			Matrix.setPoint(yOffset - y, x + xOffset);
+			matrix.setPoint(x + xOffset, yOffset - y);
+			matrix.setPoint(yOffset - y, x + xOffset);
 		}
-		if (-x + xOffset <= Matrix.getWidth() - 1 && yOffset - y <= Matrix.getHeight() - 1 && -x + xOffset >= 0
+		if (-x + xOffset <= matrix.getWidth() - 1 && yOffset - y <= matrix.getHeight() - 1 && -x + xOffset >= 0
 				&& yOffset - y >= 0) {
-			Matrix.setPoint(-x + xOffset, yOffset - y);
-			Matrix.setPoint(yOffset - y, -x + xOffset);
+			matrix.setPoint(-x + xOffset, yOffset - y);
+			matrix.setPoint(yOffset - y, -x + xOffset);
 		}
 
 	}

@@ -3,6 +3,13 @@ package algorithms;
 import objects.Matrix;
 
 public class BresenhamLine {
+	
+	private Matrix matrix;
+
+	public BresenhamLine(Matrix matrix) {
+		// TODO Auto-generated constructor stub
+		this.matrix = matrix;
+	}
 
 	// set point between 0 and 399
 	public void drawLine(int x1, int y1, int x2, int y2) {
@@ -32,10 +39,10 @@ public class BresenhamLine {
 					e += dx;
 					y += yIncrement;
 				}
-				if (x < Matrix.getWidth() && y < Matrix.getHeight() && x >= 0 && y >= 0) {
+				if (x < matrix.getWidth() && y < matrix.getHeight() && x >= 0 && y >= 0) {
 
 					System.out.println(x + " " + y);
-					Matrix.setPoint(x, y);
+					matrix.setPoint(x, y);
 				}
 				x += xIncrement;
 			}
@@ -55,9 +62,9 @@ public class BresenhamLine {
 					x += xIncrement;
 				}
 
-				if (x < Matrix.getWidth() && y < Matrix.getHeight() && x >= 0 && y >= 0) {
+				if (x < matrix.getWidth() && y < matrix.getHeight() && x >= 0 && y >= 0) {
 					System.out.println(x + " " + y);
-					Matrix.setPoint(x, y);
+					matrix.setPoint(x, y);
 				}
 				y += yIncrement;
 			}
